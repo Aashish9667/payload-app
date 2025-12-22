@@ -1,0 +1,4 @@
+@import "tailwindcss";
+@utility container {
+  @apply max-w-[min(var(--container-6xl),calc(100%-var(--spacing)*5))] mx-auto;
+}
