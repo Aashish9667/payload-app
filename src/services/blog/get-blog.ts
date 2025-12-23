@@ -5,11 +5,10 @@ type GetBlogProps = {
   limit?: number;
   page?: number;
 };
-
 export async function getBlog(props: GetBlogProps) {
   const { limit, page, payload} = props;
-  const blog = await payload.find({
-    collection: 'blog',
+return payload.find({
+  collection: 'blog',
     limit,
     page,
     sort: '-createdAt',
@@ -18,9 +17,7 @@ export async function getBlog(props: GetBlogProps) {
       title: true,
       slug: true,
      subtitle: true,
-      image: true,
-    },
-  });
+      image: true,},
+})
 
-  return blog;
 }
